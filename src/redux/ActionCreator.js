@@ -121,8 +121,8 @@ export const fetchComments = () => (dispatch) => {
     
    // method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+   // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+ //   credentials: 'same-origin', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -182,11 +182,12 @@ export const postFeedback = (firstname,lastname,telnum,email,agree,contactType,m
 
     return fetch(baseUrl + 'userFeedback',{
         method: 'POST',
+        mode: 'cors',
         body: JSON.stringify(newFeedback),
         headers: {
             'Content-Type': 'application/json'
         },
-        credentials: 'same-origin'
+    //    credentials: 'same-origin'
     })
     .then(response => {
         if (response.ok) {
@@ -225,8 +226,8 @@ export const fetchDishes = () => (dispatch) => {
     const requestOptions = {
     method: 'GET',// method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+ //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  //  credentials: 'same-origin', // include, *same-origin, omit
     headers: {'Content-Type': 'application/json'// 'Content-Type': 'application/x-www-form-urlencoded',
     },
 };
@@ -281,8 +282,8 @@ export const fetchPromos = () => (dispatch) => {
     
    // method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+ //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+ //   credentials: 'same-origin', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -332,8 +333,8 @@ export const fetchLeaders = () => (dispatch) => {
     
    // method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'same-origin', // include, *same-origin, omit
+ //   cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+ //   credentials: 'same-origin', // include, *same-origin, omit
     headers: {
       'Content-Type': 'application/json'
       // 'Content-Type': 'application/x-www-form-urlencoded',
